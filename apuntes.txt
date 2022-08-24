@@ -1,0 +1,36 @@
+Clase 1 - 10/08
+
+VARIABLES
+
+Declaracion de variable ES5 (ya no se utiliza - PROHIBIDO(?))
+
+var primeraVariable = "mi primera variable";
+var segundaVariable = 5;
+
+Declaracion de variable ES6 (esta es la que se utiliza)
+
+let terceraVariable = "primera variable con let";
+const primeraConstante = "hola a todos";
+primeraConstante = 6; // tiraría error ya que no se puede redefinir constante
+terceraVariable = 6; // esto lo permite
+
+BLOQUE
+{
+  var primera = "variable var";
+  let segunda = "variable let";
+
+  console.log(primera);
+  console.log(segunda);
+  // Se muestran en consola
+}
+console.log(primera);
+console.log(segunda);
+// Solo se muestra var ya que "let" es variable local (de bloque) y "var" global
+
+PROMPT y ALERT
+
+prompt: Recuadro para que el usuario ingrese información
+prompt("Ingrese su nombre");
+
+alert: Recuadro para que el usuario reciba información
+alert("Bienvenido");
