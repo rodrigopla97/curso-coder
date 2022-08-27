@@ -221,3 +221,53 @@ switch (key) {
   default:
     break;
 }
+
+------------------------------------------------------------------------------------------------
+
+Clase 4:
+
+Funciones
+
+function name(params) {
+    
+}
+
+Ejemplo: 
+
+Declaro la función
+function sumar() {
+  const numero1 = parseInt(prompt("Ingrese un numero"));
+  const numero2 = parseInt(prompt("Ingrese un numero"));
+
+  const resultado = numero1 + numero2;
+  alert("El resultado es " + resultado);
+}
+
+Llamo a la función
+sumar() //Llamo a la función
+
+Función por parametro:
+
+function restar(numero1, numero2) {
+  const resultado = numero1 - numero2;
+  alert("El resultado es " + resultado);
+}
+
+restar(15,7)
+
+Arrow function
+
+let exponente = function (num, exponenteParams) {
+  return num ** exponenteParams;
+};
+
+let exponenteArrow = (num, exponenteParams) => {
+  return num ** exponenteParams;
+};
+console.log(exponente(6, 2));
+console.log(exponenteArrow(6, 3));
+
+Otra forma de declararla en una linea
+
+let exponenteArrow2 = (num, exponenteParams) => num ** exponenteParams;
+
