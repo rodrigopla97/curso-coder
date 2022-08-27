@@ -53,3 +53,171 @@ Operadores:
 != Distinto -> ejemplo a != b
 !== Estrictamente distinto -> ejemplo a !== b
 <,<=,>,>= Menor, Menor o igual, Mayor o igual
+
+
+Codigo ejercicio.js:
+let horasTrabajadas = prompt("Cuantas horas trabajaste esta semana?");
+let profesion = prompt("Eres ingeniero, medico o programador?");
+let horasExtras;
+const horasJornada = 40;
+let pago;
+
+if (profesion === "ingeniero") {
+  valorHora = 40;
+} else if (profesion === "medico") {
+  valorHora = 45;
+} else if (profesion === "programador") {
+  valorHora = 50;
+} else {
+  alert("No analizamos tu profesión");
+}
+
+if (
+  horasTrabajadas > 40 &&
+  horasTrabajadas <= 60 &&
+  (profesion === "ingeniero" || profesion === "medico")
+) {
+  horasExtras = horasTrabajadas - horasJornada;
+  pago = horasJornada * valorHora + horasExtras * (1.5 * valorHora);
+} else if (
+  horasTrabajadas > 60 &&
+  (profesion === "ingeniero" || profesion === "medico")
+) {
+  horasExtras = horasTrabajadas - horasJornada;
+  pago = horasJornada * valorHora + horasExtras * (2.5 * valorHora);
+} else if (
+  horasTrabajadas > 40 &&
+  horasTrabajadas <= 60 &&
+  profesion === "programador"
+) {
+  horasExtras = horasTrabajadas - horasJornada;
+  pago = horasJornada * valorHora + horasExtras * (2 * valorHora);
+} else if (horasTrabajadas > 60 && profesion === "programador") {
+  horasExtras = horasTrabajadas - horasJornada;
+  pago = horasJornada * valorHora + horasExtras * (3 * valorHora);
+} else {
+  pago = horasTrabajadas * valorHora;
+}
+
+//Pero es mas simple acá :
+
+if (horasTrabajadas > 40 && horasTrabajadas <= 60) {
+  horasExtras = horasTrabajadas - horasJornada;
+  if (profesion === "ingeniero" || profesion === "medico") {
+    pago = horasJornada * valorHora + horasExtras * (1.5 * valorHora);
+  } else {
+    pago = horasJornada * valorHora + horasExtras * (2 * valorHora);
+  }
+} else if (horasTrabajadas > 60) {
+  horasExtras = horasTrabajadas - horasJornada;
+  if (profesion === "ingeniero" || profesion === "medico") {
+    pago = horasJornada * valorHora + horasExtras * (2.5 * valorHora);
+  } else {
+    pago = horasJornada * valorHora + horasExtras * (3 * valorHora);
+  }
+} else {
+  pago = horasTrabajadas * valorHora;
+}
+------------------------------------------------------------------------------------------------
+
+Clase 3 :
+
+Ciclos:
+
+for: Por conteo
+
+for (let index = 0; index < array.length; index++) {
+  const element = array[index];
+  // if (condition) {
+  // } else if (condition2) {
+  // } else {
+  // }
+}
+
+for (let i = 0; i <= 10; i++) {
+  console.log("Iteracion numero " + i);
+}
+
+Muestra iteracion del 1 al 10
+
+En una condición dentro del for:
+  if (i === 6) {
+    break; 
+  }
+El break interrumpe una vez que i sea 6
+
+En una condición dentro del for:
+  if (i === 6) {
+    continue; 
+  }
+El continue saltea a i una vez que i sea 6 y continua el ciclo
+
+Ejercicio ejemplo 1:
+
+let numero = parseInt(prompt("Ingrese un numero"));
+let resultadoSuma = 0;
+
+for (let i = 0; i <= numero; i++) {
+  resultadoSuma = resultadoSuma + i;
+  console.log(i, resultadoSuma);
+}
+
+Ejercicio ejemplo 2:
+let numero1 = parseInt(prompt("Ingrese un numero"));
+let numero2 = parseInt(prompt("Ingrese segundo numero"));
+
+if (numero1 < numero2) {
+  for (let i = numero1; i <= numero2; i++) {
+    console.log(i);
+  }
+} else if (numero1 > numero2) {
+  for (let i = numero1; i >= numero2; i--) {
+    console.log(i);
+  }
+} else {
+  alert("Los numeros ingresados son iguales");
+}
+
+while: Ciclo condicional
+
+while (condition) {
+  
+}
+
+Ejemplo con while:
+
+let i = 0;
+while (i <= 5) {
+  console.log("Iteracion numero con while", i);
+  i++;
+}
+console.log(i);
+
+do... while: Ciclo condicional
+
+do {
+  
+} while (condition);
+
+Ejemplo do...while:
+
+let numero = parseInt(prompt("Ingresa un numero"));
+let iteracion = 1;
+
+do {
+  numero = numero + 5;
+  let iteracion = 1;
+  console.log(numero);
+  iteracion++;
+} while (iteracion <= 8);
+
+switch: 
+
+switch (key) {
+  case value:
+    
+    break;
+
+  default:
+    break;
+}

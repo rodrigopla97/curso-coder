@@ -1,44 +1,58 @@
-var nombre = "Rodrigo";
-let apellido = "Placeres";
-// const edad = 25;
-let edad = 25;
-apellido = "Pla";
-console.log(apellido);
-// let edadUsuario = parseInt(prompt("Ingrese su edad"));
-// alert("Bienvenido cliente, tienes " +edadUsuario " años de edad");
+// ------------ Ejemplo for ------------
+// let numeroFinalizacion = parseInt(prompt("Ingresa un numero"));
 
-// alert(edad === edadUsuario);
-
-// if (edad === edadUsuario) {
-//   alert("Los dos tienen la misma edad");
+// for (let i = 0; i <= numeroFinalizacion; i++) {
+//   if (i === 6) {
+//     break;
+//   }
+//   console.log("Iteracion numero con for" + i);
 // }
+// -------------------------------------
 
-// let edadUsuario = parseInt(prompt("Ingrese su edad"));
-// if (apellido === apellidoUsuario) {
-//   edad = 33;
-// } else {
-//   edad = 19;
+// Ejemplo while
+// let i = 0;
+// while (i <= 5) {
+//   console.log("Iteracion numero con while", i);
+//   i++;
 // }
-// alert("Tu edad es: ", +edad);
+// console.log(i);
 
-// let edadUsuario = parseInt(prompt("Ingrese su edad"));
-// if (edadUsuario < 18) {
-//   alert("Eres mayor de edad");
-// } else if (edadUsuario > 60) {
-//   alert("Eres de la tercera edad");
-// } else {
-//   alert("Tienes entre 18 y 60 años");
-// }
+// ------------ do...while ------------
 
-let apellidoUsuario = prompt("Ingrese su apellido");
-let edadUsuario = parseInt(prompt("Ingrese su edad"));
-let profesion = "Médico";
+// do {
+//   console.log("Interacion numero con do...while, i");
+//   i++;
+// } while (i <= 5);
 
-if (apellido === apellidoUsuario) {
-  profesion = "Ingeniero";
+// Ejemplo do...while
+// let numero = parseInt(prompt("Ingresa un numero"));
+// let iteracion = 1;
+
+// do {
+//   numero = numero + 5;
+//   let iteracion = 1;
+//   console.log(numero);
+//   iteracion++;
+// } while (iteracion <= 8);
+
+// ------------------------------------
+
+// -------------- switch --------------
+
+let color = prompt("Ingrese un color");
+
+switch (color) {
+  case "azul":
+    alert("El color es azul");
+    break;
+  case "rojo":
+    alert("El color es rojo");
+    break;
+  case "verde":
+    alert("El color es verde");
+    break;
+  default:
+    alert("No ingresaste un color esperado");
+    break;
 }
-
-if (edad === edadUsuario) {
-  nombre = "Juan";
-}
-alert("Hola " + nombre + " tu profesion es: " + profesion);
+// ------------------------------------
