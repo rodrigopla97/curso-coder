@@ -34,3 +34,22 @@ prompt("Ingrese su nombre");
 
 alert: Recuadro para que el usuario reciba información
 alert("Bienvenido");
+
+------------------------------------------------------------------------------------------------
+
+Clase 2:
+
+Condición:
+
+if (condition) {  
+}
+
+Operadores: 
+
+== Es igual -> ejemplo a == b
+=== Es estrictamente igual -> ejemplo a === b
+3 == "3" (true)
+3 === "3" (false)
+!= Distinto -> ejemplo a != b
+!== Estrictamente distinto -> ejemplo a !== b
+<,<=,>,>= Menor, Menor o igual, Mayor o igual
