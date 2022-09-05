@@ -271,3 +271,51 @@ Otra forma de declararla en una linea
 
 let exponenteArrow2 = (num, exponenteParams) => num ** exponenteParams;
 
+------------------------------------------------------------------------------------------------
+
+Clase 5
+
+Objetos
+
+las Funciones se pueden declarar de esta forma:
+
+function Usuario(nombre, email, password) {
+  this.nombre = nombre;
+  this.email = email;
+  this.password = password;
+}
+
+const usuario1 = new Usuario("Rodrigo", "mailtest@gmail.com", "12345");
+const usuario2 = new Usuario("Saul", null, "abcde");
+
+function tieneEmail(usuario) {
+  if (usuario.email) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+pero se recomienda usar de esta forma, como clases:
+
+class Usuario {
+  constructor(nombre, email, password) {
+    this.nombre = nombre;
+    this.email = email;
+    this.password = password;
+  }
+
+  tieneEmail() {
+    if (this.email) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  cambiarPass(nuevaPass) {
+    this.password = nuevaPass;
+  }
+}
+
+------------------------------------------------------------------------------------------------
