@@ -378,3 +378,28 @@ let indice = numeros.indexOf(numeroPregunta)  indica en que posición se encuent
 let existeNumero = numeros.includes(numeroPregunta) indica si existe ese numero en el array, devuelve true or false
 
 ------------------------------------------------------------------------------------------------
+Clase 7: Funciones de orden superior
+
+function elevar(n) {
+    return function (n) {
+        return m ** n
+    }
+
+}
+
+let cuadrado = elevar(2)
+let cubo = elevar(3)
+let cuatro = elevar(4)
+
+console.log(cuadrado(7))
+Acá la función quedaría 7 ** 2 --> muestra 49
+
+Metodos de array:
+
+En vez de pasar por el array con for
+for (let i = 0; i < arregloNum.length; i++) {
+    console.log(arregloNum[i])
+}
+lo reemplazamos por este forEach que pasa por todos los objetos
+arregloObjeto.forEach(obj=>console.log(obj))
+------------------------------------------------------------------------------------------------
