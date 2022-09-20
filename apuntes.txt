@@ -434,3 +434,29 @@ const tituloQueryEtiqueta = document.querySelector('h1')
 console.log(tituloQueryEtiqueta)
 
 ------------------------------------------------------------------------------------------------
+
+Clase 9: Eventos
+
+Primera forma de escuchar Eventos
+
+boton1.addEventListener('click', clickFunction)
+
+function clickFunction() {
+    console.log(('Haciendo click en el primer botón'))
+}
+
+div1.addEventListener('mousemove', mouveFunction)
+function mouveFunction() {
+    console.log(('Moviendo el mouse en el div azul'))
+}
+
+div1.addEventListener('mouseout', outFunction)
+function outFunction() {
+    console.log(('Out mouse en el div azul'))
+}
+div1.addEventListener('mouseout', () => {
+    console.log(('Out mouse en el div azul'))
+})
+
+Segunda forma de escuchar Eventos
+------------------------------------------------------------------------------------------------

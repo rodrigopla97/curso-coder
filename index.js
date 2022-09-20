@@ -1,55 +1,72 @@
-// console.log(document)
-// console.log(document.body)
+const boton1 = document.getElementById('boton1')
+const div1 = document.querySelector('.div1')
+const input1 = document.getElementById('input1')
 
-// document.getElementById('titulo')
-// console.log(document.getElementById('titulo'))
+// boton1.addEventListener('click', clickFunction)
 
-// const titulo1 = document.getElementById('titulo')
-// console.log(titulo1)
+// function clickFunction() {
+//     console.log(('Haciendo click en el primer botón'))
+// }
 
-// const titulo2 = document.getElementsByTagName('h1')
-// console.log(titulo2)
+// div1.addEventListener('mousemove', mouveFunction)
+// function mouveFunction() {
+//     console.log(('Moviendo el mouse en el div azul'))
+// }
 
-// const titulo3 = document.getElementsByClassName('clase-titulo')
-// console.log(titulo3)
+// div1.addEventListener('mouseout', outFunction)
+// function outFunction() {
+//     console.log(('Out mouse en el div azul'))
+// }
+// div1.addEventListener('mouseout', () => {
+//     console.log(('Out mouse en el div azul'))
+// })
 
-// const tituloQueryClass = document.querySelector('.clase-titulo')
-// const tituloQueryClass = document.querySelectorAll('.clase-titulo')
-// console.log(tituloQueryClass)
-// // querySelectorAll muestra todos los que tengan la clase "clase-titulo"
-// // querySelector muestra el primero que tengan la clase "clase-titulo"
+// Segunda forma de escuchar eventos
 
-// const tituloQueryId = document.querySelector('#titulo')
-// console.log(tituloQueryId)
-
-
-
-// const tituloQueryEtiqueta = document.querySelector('h1')
-// console.log(tituloQueryEtiqueta)
-
-// -----------------------------------------------
-
-// let titulo1 = document.getElementById('titulo')
-
-// titulo1.innerText = 'DOM MODIFICADO'
-// titulo1.innerHTML = '<h4>DOOOOM</h4>'
-
-// -----------------------------------------------
-
-// -----------------------------------------------
-
-const tituloQueryId = document.querySelectorAll('h1')
-
-for (const elemento of tituloQueryId) {
-    elemento.innerText = 'Cambiado'
+boton1.onclick = () => {
+    console.log('Haciendo click en el primer botón')
 }
 
-// -----------------------------------------------
+div1.onmouseover = () => {
+    console.log(('Over mouse en div azul'))
+}
 
-const titulo1 = document.getElementById('titulo')
-const parrafo = document.createElement('p')
-parrafo.innerText = 'Parrafo creado desde javascript'
+div1.onmouseout = () => {
+    console.log(('Out mouse en div azul'))
+}
 
-const divPrueba = document.getElementById('div')
-divPrueba.append(parrafo) // agrega un parrafo
-titulo1.remove() // borra titulo1
+// input1.oninput = () => {
+//     console.log('evento input')
+// }
+
+// input1.onchange = () => {
+//     console.log('evento change')
+// }
+
+// input1.oninput = (evento) => {
+//     console.log(evento.target.value) // devuelve lo que se tipeo
+// }
+
+// input1.onchange = (e) => {
+//     console.log(e.target.value)// devuelve lo que se tipeo
+// }
+
+input1.onkeydown = (evento) => {
+    if (evento.code === 'Enter') {
+        console.log('Tecla enter')
+    }
+    console.log(evento.code)
+}
+
+const formulario = document.getElementById('form')
+formulario.onsubmit = (e) => {
+    e.preventDefault()
+    console.log(e)
+    console.log(e.target.children[0].value)
+    console.log(e.target.children[1].value)
+    console.log(e.target.children[2].value)
+
+    Array.from(e.target.children).forEach(elemento => {
+        console.log(elemento.value)
+    });
+}
