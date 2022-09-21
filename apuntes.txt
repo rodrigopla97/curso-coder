@@ -460,3 +460,13 @@ div1.addEventListener('mouseout', () => {
 
 Segunda forma de escuchar Eventos
 ------------------------------------------------------------------------------------------------
+Clase 10: Storage
+
+localStorage
+sessionStorage
+
+const nombre = localStorage.setItem('name')
+const edad = localStorage.setItem('edad')
+console.log(edad,nombre) // Devuelve resultado pero de tipo string (no numero)
+
+------------------------------------------------------------------------------------------------
